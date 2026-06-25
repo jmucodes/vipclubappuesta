@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appuesta · VIP Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css">
+<style>
+  :root{
+    /* Rebrand here: swap these to match Appuesta's site palette */
+    --bg:#f4f3f0;
+    --surface:#ffffff;
+    --text:#1b1a17;
+    --muted:#6c6a64;
+    --hint:#9d9b93;
+    --border:rgba(20,18,12,.09);
+    --chip:#f3f1ec;
+    --gold:#b07d1f;
+    --gold-deep:#8a5f12;
+    --gold-soft:#f7ecd6;
+    --gray-soft:#ececea;
+    --green:#2f8f5b;
+    --radius:14px;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    line-height:1.5;-webkit-font-smoothing:antialiased;
+    padding:32px 18px 56px;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto}
+
+  header.hero{margin:0 0 26px}
+  .eyebrow{font:600 12px/1 'Inter';letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+  h1{font:700 30px/1.1 'Manrope';margin:0 0 8px;letter-spacing:-.01em}
+  .lede{font-size:15px;color:var(--muted);margin:0;max-width:52ch}
+
+  .card{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px 18px;margin-bottom:14px;position:relative;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,18,12,.06)}
+  .card.flagship{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+  .flag-tag{
+    position:absolute;top:-9px;right:16px;background:var(--gold);color:#fff;
+    font:600 10.5px/1 'Inter';letter-spacing:.08em;text-transform:uppercase;
+    padding:5px 9px;border-radius:6px;
+  }
+
+  .top{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+  .badge{
+    width:42px;height:42px;border-radius:50%;flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;font-size:20px;
+    background:var(--gold-soft);color:var(--gold-deep);
+  }
+  .badge.entry{background:var(--gray-soft);color:var(--muted)}
+  .name{font:600 17px/1.15 'Manrope';margin:0}
+  .desc{font-size:12.5px;color:var(--muted);margin:1px 0 0}
+  .cash{margin-left:auto;text-align:right}
+  .cash .lbl{font-size:11px;color:var(--hint);margin:0;text-transform:uppercase;letter-spacing:.06em}
+  .cash .pct{font:700 26px/1 'Manrope';margin:2px 0 0;color:var(--gold)}
+  .cash .pct.zero{color:var(--hint)}
+
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:14px}
+  .metric{background:var(--chip);border-radius:9px;padding:9px 11px;min-width:0}
+  .metric .ml{font-size:11px;color:var(--muted);margin:0 0 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .metric .mv{font:600 15px/1.1 'Manrope';margin:0;white-space:nowrap}
+  .metric .mv.dash{color:var(--hint);font-weight:500}
+  .metric .mv.unc{color:var(--gold)}
+
+  .perks{display:flex;flex-wrap:wrap;gap:7px}
+  .perk{
+    display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+    padding:4px 9px;border-radius:8px;background:var(--chip);color:var(--text);
+  }
+  .perk i{font-size:14px;color:var(--green)}
+  .perk.off{background:transparent;color:var(--hint)}
+  .perk.off i{color:var(--hint)}
+
+  .note{font-size:12px;color:var(--hint);margin:18px 2px 0;line-height:1.6}
+
+  @media (max-width:560px){
+    h1{font-size:25px}
+    .metrics{grid-template-columns:repeat(2,1fr)}
+    .cash .pct{font-size:23px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">Appuesta</p>
+    <h1>VIP Club</h1>
+    <p class="lede">Mientras más juegas, más subes. El cashback semanal, los torneos exclusivos y los regalos crecen con tu nivel.</p>
+  </header>
+
+  <!-- ROOKIE -->
+  <article class="card">
+    <div class="top">
+      <div class="badge entry"><i class="ti ti-shield"></i></div>
+      <div><p class="name">Rookie</p><p class="desc">Nivel de entrada · gratis para todos</p></div>
+      <div class="cash"><p class="lbl">Cashback</p><p class="pct zero">0%</p></div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><p class="ml">Apostado de por vida</p><p class="mv">0</p></div>
+      <div class="metric"><p class="ml">Tope semanal</p><p class="mv dash">—</p></div>
+      <div class="metric"><p class="ml">Bono de nivel</p><p class="mv dash">—</p></div>
+      <div class="metric"><p class="ml">Bono cumpleaños</p><p class="mv dash">—</p></div>
+    </div>
+    <div class="perks">
+      <span class="perk"><i class="ti ti-check"></i>ComboBoost</span>
+      <span class="perk"><i class="ti ti-check"></i>Torneos abiertos</span>
+      <span class="perk"><i class="ti ti-check"></i>Bono mensual</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Recarga</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Torneos VIP</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Rifas</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Bono diario</span>
+      <span class="perk off"><i class="ti ti-headset"></i>Soporte · Estándar</span>
+    </div>
+  </article>
+
+  <!-- CONTENDER -->
+  <article class="card">
+    <div class="top">
+      <div class="badge"><i class="ti ti-medal"></i></div>
+      <div><p class="name">Contender</p><p class="desc">Cashback desbloqueado</p></div>
+      <div class="cash"><p class="lbl">Cashback</p><p class="pct">5%</p></div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><p class="ml">Apostado de por vida</p><p class="mv">25,000</p></div>
+      <div class="metric"><p class="ml">Tope semanal</p><p class="mv">500</p></div>
+      <div class="metric"><p class="ml">Bono de nivel</p><p class="mv">200</p></div>
+      <div class="metric"><p class="ml">Bono cumpleaños</p><p class="mv">100</p></div>
+    </div>
+    <div class="perks">
+      <span class="perk"><i class="ti ti-check"></i>ComboBoost</span>
+      <span class="perk"><i class="ti ti-check"></i>Torneos abiertos</span>
+      <span class="perk"><i class="ti ti-check"></i>Bono mensual</span>
+      <span class="perk"><i class="ti ti-check"></i>Recarga</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Torneos VIP</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Rifas</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Bono diario</span>
+      <span class="perk off"><i class="ti ti-headset"></i>Soporte · Estándar</span>
+    </div>
+  </article>
+
+  <!-- CHAMPION -->
+  <article class="card">
+    <div class="top">
+      <div class="badge"><i class="ti ti-medal-2"></i></div>
+      <div><p class="name">Champion</p><p class="desc">Apostador frecuente</p></div>
+      <div class="cash"><p class="lbl">Cashback</p><p class="pct">6%</p></div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><p class="ml">Apostado de por vida</p><p class="mv">150,000</p></div>
+      <div class="metric"><p class="ml">Tope semanal</p><p class="mv">2,000</p></div>
+      <div class="metric"><p class="ml">Bono de nivel</p><p class="mv">1,200</p></div>
+      <div class="metric"><p class="ml">Bono cumpleaños</p><p class="mv">600</p></div>
+    </div>
+    <div class="perks">
+      <span class="perk"><i class="ti ti-check"></i>ComboBoost</span>
+      <span class="perk"><i class="ti ti-check"></i>Torneos abiertos</span>
+      <span class="perk"><i class="ti ti-check"></i>Bono mensual</span>
+      <span class="perk"><i class="ti ti-check"></i>Recarga</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Torneos VIP</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Rifas</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Bono diario</span>
+      <span class="perk off"><i class="ti ti-headset"></i>Soporte · Estándar</span>
+    </div>
+  </article>
+
+  <!-- MVP -->
+  <article class="card">
+    <div class="top">
+      <div class="badge"><i class="ti ti-award"></i></div>
+      <div><p class="name">MVP</p><p class="desc">Comienza el nivel VIP</p></div>
+      <div class="cash"><p class="lbl">Cashback</p><p class="pct">7%</p></div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><p class="ml">Apostado de por vida</p><p class="mv">750,000</p></div>
+      <div class="metric"><p class="ml">Tope semanal</p><p class="mv">6,000</p></div>
+      <div class="metric"><p class="ml">Bono de nivel</p><p class="mv">6,000</p></div>
+      <div class="metric"><p class="ml">Bono cumpleaños</p><p class="mv">3,000</p></div>
+    </div>
+    <div class="perks">
+      <span class="perk"><i class="ti ti-check"></i>ComboBoost</span>
+      <span class="perk"><i class="ti ti-check"></i>Torneos abiertos</span>
+      <span class="perk"><i class="ti ti-check"></i>Bono mensual</span>
+      <span class="perk"><i class="ti ti-check"></i>Recarga</span>
+      <span class="perk"><i class="ti ti-check"></i>Torneos VIP · Normal</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Rifas</span>
+      <span class="perk off"><i class="ti ti-minus"></i>Bono diario</span>
+      <span class="perk"><i class="ti ti-headset"></i>Soporte · Prioritario</span>
+    </div>
+  </article>
+
+  <!-- LEGEND -->
+  <article class="card">
+    <div class="top">
+      <div class="badge"><i class="ti ti-trophy"></i></div>
+      <div><p class="name">Legend</p><p class="desc">Sin tope · host personal</p></div>
+      <div class="cash"><p class="lbl">Cashback</p><p class="pct">9%</p></div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><p class="ml">Apostado de por vida</p><p class="mv">3,000,000</p></div>
+      <div class="metric"><p class="ml">Tope semanal</p><p class="mv unc">Sin tope</p></div>
+      <div class="metric"><p class="ml">Bono de nivel</p><p class="mv">24,000</p></div>
+      <div class="metric"><p class="ml">Bono cumpleaños</p><p class="mv">12,000</p></div>
+    </div>
+    <div class="perks">
+      <span class="perk"><i class="ti ti-check"></i>ComboBoost</span>
+      <span class="perk"><i class="ti ti-check"></i>Torneos abiertos</span>
+      <span class="perk"><i class="ti ti-check"></i>Bono mensual</span>
+      <span class="perk"><i class="ti ti-check"></i>Recarga</span>
+      <span class="perk"><i class="ti ti-check"></i>Torneos VIP · Exclusivos</span>
+      <span class="perk"><i class="ti ti-check"></i>Rifas</span>
+      <span class="perk"><i class="ti ti-check"></i>Bono diario · Alto</span>
+      <span class="perk"><i class="ti ti-headset"></i>Soporte · Host personal</span>
+    </div>
+  </article>
+
+  <!-- GOAT -->
+  <article class="card flagship">
+    <span class="flag-tag">Flagship</span>
+    <div class="top">
+      <div class="badge"><i class="ti ti-crown"></i></div>
+      <div><p class="name">GOAT</p><p class="desc">Todo al máximo</p></div>
+      <div class="cash"><p class="lbl">Cashback</p><p class="pct">10%</p></div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><p class="ml">Apostado de por vida</p><p class="mv">10,000,000</p></div>
+      <div class="metric"><p class="ml">Tope semanal</p><p class="mv unc">Sin tope</p></div>
+      <div class="metric"><p class="ml">Bono de nivel</p><p class="mv">80,000</p></div>
+      <div class="metric"><p class="ml">Bono cumpleaños</p><p class="mv">40,000</p></div>
+    </div>
+    <div class="perks">
+      <span class="perk"><i class="ti ti-check"></i>ComboBoost</span>
+      <span class="perk"><i class="ti ti-check"></i>Torneos abiertos</span>
+      <span class="perk"><i class="ti ti-check"></i>Bono mensual</span>
+      <span class="perk"><i class="ti ti-check"></i>Recarga</span>
+      <span class="perk"><i class="ti ti-check"></i>Torneos VIP · Eventos</span>
+      <span class="perk"><i class="ti ti-check"></i>Rifas</span>
+      <span class="perk"><i class="ti ti-check"></i>Bono diario · Máximo</span>
+      <span class="perk"><i class="ti ti-headset"></i>Soporte · Host personal</span>
+    </div>
+  </article>
+
+  <p class="note">Montos en DOP. El cashback es semanal sobre la pérdida neta (requisito de apuesta 1×, cuota mínima 1.50). El cashback de Legend y GOAT no tiene tope, limitado por una ganancia máxima de 2×. Los niveles se otorgan por apostado acumulado de por vida.</p>
+
+</div>
+</body>
+</html>
